@@ -29,6 +29,7 @@ body {
 .menuBar {
 	display: block;
 	position: fixed;
+  background-color: black;
 	top: 0;
 	left: 0;
   margin-left: 110px;
@@ -41,7 +42,16 @@ body {
 	margin-top:40px;
 }
 
- ul li{
+#nav a{
+	display:block;
+	text-decoration: none;
+	/*font-family: Arial, Helvetica, sans-serif;*/
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #fff;
+}
+
+ul li{
 	list-style: none;
 	float: left;
 	margin-right: 50px;
@@ -63,21 +73,17 @@ li:hover {
   opacity:.4;
 }
 
-#nav a{
-	display:block;
-	text-decoration: none;
-	/*font-family: Arial, Helvetica, sans-serif;*/
-	text-transform: uppercase;
-	font-size: 12px;
-	color: #fff;
+/*contains .titleBlock and #titleText*/
+#intro{
+  padding-top: 250px;
+  padding-left: 260px;
 }
 
 .titleBlock {
     font-family: "Montserrat";
     font-size: 70px;
     font-weight: 100;
-    padding-top: 250px;
-    padding-left: 260px;
+
     color: #fff;
 }
 
@@ -85,9 +91,18 @@ li:hover {
 	font-family: "Montserrat";
 	line-height: 32px;
 	font-weight: 200;
-  padding-left: 260px;
+
 	font-size: 26px;
 
 	color: #fff;
 	height:50px;
+}
+
+
+#contact {
+  font-family: "Montserrat";
+  line-height: 32px;
+	font-weight: 200;
+  padding-left: 260px;
+  padding-top: 2000px;
 }
