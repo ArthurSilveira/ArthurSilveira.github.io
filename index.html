@@ -21,10 +21,10 @@
 	<div id="menuBar" class="menuBar">
       <!--<img id ="logo" src="images/myLogohere">-->
       <ul id ="nav">
-        <li><a href="#">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="./resume/resume.pdf">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="./resume/resume.pdf">resume</a></li>
+        <li><a href="#contact">contact</a></li>
       </ul>
     </div> <!-- menuBar end -->
 
@@ -37,8 +37,6 @@
 
     <div id="projects" class="container">
       <div class="titleBlock">My Projects</div>
-
-      </p>
     </div><!--contact end-->
 
     <div id="contact" class="container">
@@ -61,6 +59,8 @@
 	
 
 <script>
+
+	/*typed text animation*/
 	$(function(){
       $(".scroller").typed({
         strings: ["Student", "Programmer","Designer"],
@@ -74,8 +74,22 @@
 
   	});
 
+	/*
+	$("#nav").click(function(e) {
+		e.preventDefault();
+		var idName = "#" + $(this).attr('id').toLowerCase();
+
+		$("html, body").animate({ 
+			scrollTop: $(idName).offset().top -100
+		}, 1000);
+	});*/
+
+	
+
+
+	/*navigation bar collapsing animation*/
 	$(window).scroll(function(){
-		if ($(this).scrollTop() > 2){
+		if ($(this).scrollTop() > 35){
 			$('#menuBar').addClass('sticky');
 		}
 		else{

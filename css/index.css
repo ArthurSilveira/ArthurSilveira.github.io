@@ -30,12 +30,12 @@ body {
 }
 
 .menuBar {
-  transition: all 0.6s ease;
-  height: 200px;
-  font-size: 12px;
+  transition: all .8s ease;
+  height: 300px;
+  font-size: 13px;
 	display: block;
 	position: fixed;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0,0,0,.3);
   width: 100%;
 	top: 0;
 	left: 0;
@@ -43,9 +43,10 @@ body {
 }
 
 .menuBar.sticky {
-  transition: all 0.4s ease;
+  transition: all .8s ease;
   height: 50px;
   text-align: left;
+  background-color: rgba(0,0,0,.91);
 }
 
 #nav {
@@ -88,9 +89,9 @@ li:hover {
 
 /*contains .titleBlock and #titleText*/
 #intro{
-  padding-top: 260px;
+  padding-top: 360px;
   padding-left: 260px;
-  height: 700px;
+  height:100vh;
   background-color: black;
 
 }
@@ -110,13 +111,10 @@ li:hover {
   /*color: #1a661a;*/
 }
 
-#center {
-}
-
 #projects {
   font-family: "Montserrat";
-  padding-top: 80px;
-  padding-bottom: 600px;
+  padding-top: 100px;
+  height:100vh;
   text-align: center;
   color: black;
   background-color: white;
@@ -126,8 +124,8 @@ li:hover {
   font-family: "Montserrat";
   text-align: center;
   line-height: 25px;
-  padding-top: 80px;
-  padding-bottom: 600px;
-  color: white;
-  background-color: black;
+  padding-top: 100px;
+  height:100vh;
+  color: black;
+  background-color: white;
 }
