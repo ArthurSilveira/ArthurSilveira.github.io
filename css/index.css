@@ -43,10 +43,10 @@ body {
 }
 
 .menuBar.sticky {
-  transition: all .8s ease;
+  
   height: 50px;
   text-align: left;
-  background-color: rgba(0,0,0,.91);
+  background-color: rgba(17,17,17,.91);
 }
 
 nav {
@@ -128,8 +128,15 @@ li:hover {
 #contactSection {
   font-family: "Montserrat";
   text-align: center;
-  padding-top: 100px;
+  padding-top: 250px;
   height:100vh;
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: black;
+}
+
+#contactInfo {
+  padding-top: 50px;
+  line-height: 50px;
+  font-weight: 50;
+  font-size: 20px;
 }

@@ -43,10 +43,11 @@
 
     <div id="contactSection" class="container">
     	<div class="titleBlock">Say Hello</div>
-    	<br>
-    	<br>
-        assi223@g.uky.edu<br>
-        859.913.0567
+    		<div id="contactInfo">
+		        assi223@g.uky.edu<br>
+		        859.913.0567<br>
+		        github.com/arthurSilveira
+        	</div>
       
     </div><!--contact end-->
     
@@ -93,7 +94,7 @@
 
 	/*navigation bar collapsing animation*/
 	$(window).scroll(function(){
-		if ($(this).scrollTop() > 35){
+		if ($(this).scrollTop() > 100){
 			$('#menuBar').addClass('sticky');
 			//$('#introSection').addClass('shrink')
 		}
