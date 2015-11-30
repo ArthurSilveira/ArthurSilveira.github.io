@@ -20,28 +20,28 @@
 
 	<div id="menuBar" class="menuBar">
       <!--<img id ="logo" src="images/myLogohere">-->
-    <nav>
-      <ul id ="nav">
-        <li><a href="#">about</a></li>
-        <li><a href="#projects">projects</a></li>
-        <li><a href="./resume/resume.pdf">resume</a></li>
-        <li><a href="#contact">contact</a></li>
-      </ul>
-    </nav>
+	    <nav>
+	      <ul>
+	        <li><a id="home">home</a></li>
+	        <li><a id="projects">projects</a></li>
+	        <li><a id="contact">contact</a></li>
+	        <li><a id="resume" href="./resume/resume.pdf">resume</a></li>
+	      </ul>
+	    </nav>
     </div> <!-- menuBar end -->
 
-    <div id="intro" class="container">
+    <div id="homeSection" class="container">
       <div class="titleBlock">Arthur Silveira</div>
       <div id="titleText"><div style="float: left;"  class="scroller"> </div></div>
-    </div> <!-- intro end -->
+    </div> <!-- homeSection end -->
 
     <div id="center">
 
-    <div id="projects" class="container">
+    <div id="projectsSection" class="container">
       <div class="titleBlock">My Projects</div>
     </div><!--contact end-->
 
-    <div id="contact" class="container">
+    <div id="contactSection" class="container">
     	<div class="titleBlock">Say Hello</div>
     	<br>
     	<br>
@@ -76,19 +76,30 @@
 
   	});
 
+	/*scrolling animation on anchors*/
+	$(document).ready(function(){
+		setNavListeners();
+	});
 
-
-
+	/*sets listeners on anchor tags*/
+	function setNavListeners(){
+		$("nav a").click(function(e){
+			var sectionID = "#" + e.currentTarget.id + "Section";
+			$('html, body').animate({
+        		scrollTop: $(sectionID).offset().top
+    		}, 500);
+		})
+	}
 
 	/*navigation bar collapsing animation*/
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > 35){
 			$('#menuBar').addClass('sticky');
-			$('#intro').addClass('shrink')
+			//$('#introSection').addClass('shrink')
 		}
 		else{
 			$('#menuBar').removeClass('sticky');
-			$('#intro').removeClass('shrink');
+			//$('#introSection').removeClass('shrink');
 		}
 	});
 

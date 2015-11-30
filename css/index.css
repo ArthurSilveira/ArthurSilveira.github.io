@@ -88,7 +88,7 @@ li:hover {
 }
 
 /*contains .titleBlock and #titleText*/
-#intro{
+#homeSection{
   transition: all 1.2s ease;
   padding-top: 320px;
   padding-left: 260px;
@@ -97,7 +97,7 @@ li:hover {
 
 }
 
-#intro.shrink {
+#homeSection.shrink {
   height: 160px;
 }
 
@@ -116,7 +116,7 @@ li:hover {
   /*color: #1a661a;*/
 }
 
-#projects {
+#projectsSection {
   font-family: "Montserrat";
   padding-top: 100px;
   height:100vh;
@@ -125,10 +125,9 @@ li:hover {
   background-color: white;
 }
 
-#contact {
+#contactSection {
   font-family: "Montserrat";
   text-align: center;
-  line-height: 25px;
   padding-top: 100px;
   height:100vh;
   color: black;
