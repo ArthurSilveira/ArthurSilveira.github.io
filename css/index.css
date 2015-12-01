@@ -1,57 +1,57 @@
 @font-face {
-  font-family: Oak;
-  src: url("../fonts/Oak-Bold.ttf");
+	font-family: Oak;
+	src: url("../fonts/Oak-Bold.ttf");
 }
 
 @font-face {
-  font-family: Ancillary;
-  src: url("../fonts/Ancillary-Regular.otf");
+	font-family: Ancillary;
+	src: url("../fonts/Ancillary-Regular.otf");
 }
 
 html{
-  font-family: "Montserrat";
-  height: 100%;
-  padding: 0;
-  margin: 0;
+	font-family: "Montserrat";
+	height: 100%;
+	padding: 0;
+	margin: 0;
 
 }
 
 body {
-  height: 100%;
+	height: 100%;
 	margin: 0;
-  padding: 0;
-  background-color: white;
-  color: white;
-  background-position: center;
+	padding: 0;
+	background-color: white;
+	color: white;
+	background-position: center;
 	background-size: cover;
-  overflow-y: scroll;
-  color: white;
+	overflow-y: scroll;
+	color: white;
 
 }
 
 .menuBar {
-  transition: all .8s ease;
-  height: 300px;
-  font-size: 13px;
+	transition: all .8s ease;
+	height: 300px;
+	font-size: 13px;
 	display: block;
 	position: fixed;
-  background-color: rgba(0,0,0,.3);
-  width: 100%;
+	background-color: rgba(0,0,0,.3);
+	width: 100%;
 	top: 0;
 	left: 0;
 	/*z-index:-100;*/
 }
 
 .menuBar.sticky {
-  
-  height: 50px;
-  text-align: left;
-  background-color: rgba(17,17,17,.91);
+	
+	height: 50px;
+	text-align: left;
+	background-color: rgba(17,17,17,.91);
 }
 
 nav {
-  position: absolute;
-  bottom: 30%;
+	position: absolute;
+	bottom: 30%;
 	float: left;
 	margin-left: 220px;
 }
@@ -71,40 +71,36 @@ ul li{
 	margin-right: 50px;
 	font-family:"Montserrat";
 	letter-spacing:3px;
-  -o-transition:.3s;
-  -ms-transition:.3s;
-  -moz-transition:.3s;
-  -webkit-transition:.3s;
-  transition:.3s;
-  cursor:pointer;
+	-o-transition:.3s;
+	-ms-transition:.3s;
+	-moz-transition:.3s;
+	-webkit-transition:.3s;
+	transition:.3s;
+	cursor:pointer;
 }
 
 li:hover {
  -o-transition:.3s;
-  -ms-transition:.3s;
-  -moz-transition:.3s;
-  -webkit-transition:.3s;
-  opacity:.4;
+	-ms-transition:.3s;
+	-moz-transition:.3s;
+	-webkit-transition:.3s;
+	opacity:.4;
 }
 
 /*contains .titleBlock and #titleText*/
 #homeSection{
-  transition: all 1.2s ease;
-  padding-top: 320px;
-  padding-left: 260px;
-  height:100vh;
-  background-color: black;
+	transition: all 1.2s ease;
+	padding-top: 320px;
+	padding-left: 260px;
+	height:100vh;
+	background-color: black;
 
-}
-
-#homeSection.shrink {
-  height: 160px;
 }
 
 .titleBlock {
-    font-family: "Montserrat";
-    font-size: 70px;
-    font-weight: 100;
+		font-family: "Montserrat";
+		font-size: 70px;
+		font-weight: 100;
 }
 
 #titleText {
@@ -113,30 +109,30 @@ li:hover {
 	font-weight: 200;
 	font-size: 26px;
 	height:50px;
-  /*color: #1a661a;*/
+	/*color: #1a661a;*/
 }
 
 #projectsSection {
-  font-family: "Montserrat";
-  padding-top: 100px;
-  height:100vh;
-  text-align: center;
-  color: black;
-  background-color: white;
+	font-family: "Montserrat";
+	padding-top: 100px;
+	height:100vh;
+	text-align: center;
+	color: black;
+	background-color: white;
 }
 
 #contactSection {
-  font-family: "Montserrat";
-  text-align: center;
-  padding-top: 250px;
-  height:100vh;
-  color: white;
-  background-color: black;
+	font-family: "Montserrat";
+	text-align: center;
+	padding-top: 250px;
+	height:100vh;
+	color: white;
+	background-color: black;
 }
 
 #contactInfo {
-  padding-top: 50px;
-  line-height: 50px;
-  font-weight: 50;
-  font-size: 20px;
+	padding-top: 50px;
+	line-height: 50px;
+	font-weight: 50;
+	font-size: 20px;
 }
