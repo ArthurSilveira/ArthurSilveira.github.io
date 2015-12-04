@@ -11,18 +11,41 @@
 	<!--for the typed text animation-->
 	<script src="js/typed.js"> </script>
 
+	<!-- loading entirely too many favicons -->
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="./images/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="./images/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="./images/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="./images/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="./images/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="./images/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="./images/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="./images/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="./images/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="./images/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="./images/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="./images/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="./images/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="./images/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="./images/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="./images/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="./images/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="./images/mstile-310x310.png" />
+
+
 </head>
 
 <body>
 
 	<div id="menuBar" class="menuBar">
-		<!--<img id ="logo" src="images/myLogohere">-->
+		<a id="home" ><img id ="logo" class="logo" src="images/logo.png"></a>
 		<nav>
 			<ul>
-				<li><a id="home">home</a></li>
 				<li><a id="projects">projects</a></li>
 				<li><a id="contact">contact</a></li>
-				<li><a id="resume" href="./resume/resume.pdf">resume</a></li>
+				<li><a id="resume" href="./resume/resume.pdf" target="_blank">resume</a></li>
+				<li><a id="github" href ="https://github.com/arthurSilveira" target="_blank">GitHub</a></li>
 			</ul>
 		</nav>
 	</div> <!-- menuBar end -->
@@ -40,7 +63,6 @@
 		<div class="titleBlock">Say Hello</div>
 			<div id="contactInfo">
 				assi223@g.uky.edu<br>
-				github.com/arthurSilveira
 			</div>
 	</div><!--contactSection end-->
 
@@ -60,15 +82,18 @@
 		});
 
 	});
-
-	/*scrolling animation on anchors*/
+	
 	$(document).ready(function(){
+
+			// fade in menu bar
+		$('#menuBar').fadeIn('slow');
+			// set nav listeners for scrolling animation
 		setNavListeners();
 	});
 
 	/*sets listeners on anchor tags*/
 	function setNavListeners(){
-		$("nav a").click(function(e){
+		$("#menuBar a").click(function(e){
 			var sectionID = "#" + e.currentTarget.id + "Section";
 
 			$('html, body').animate({
@@ -81,9 +106,12 @@
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > 100){
 			$('#menuBar').addClass('sticky');
+			$('#logo').addClass('fade');
 		}
 		else{
 			$('#menuBar').removeClass('sticky');
+			$('#logo').removeClass('fade');
+			
 		}
 	});
 
