@@ -38,33 +38,42 @@
 
 <body>
 
-	<div id="menuBar" class="menuBar">
+	<div id="menuBar" class="fadeIn">
 		<a id="home" ><img id ="logo" class="logo" src="images/logo.png"></a>
 		<nav>
 			<ul>
+				<li><a id="about">about</a></li>
 				<li><a id="projects">projects</a></li>
-				<li><a id="contact">contact</a></li>
 				<li><a id="resume" href="./resume/resume.pdf" target="_blank">resume</a></li>
 				<li><a id="github" href ="https://github.com/arthurSilveira" target="_blank">GitHub</a></li>
 			</ul>
 		</nav>
+		<a id="contact">contact</a>
 	</div> <!-- menuBar end -->
+
+	<div id="contactSection" class="sideBar">
+		<div id="buttonContainer">
+			<a id="closeContact" ><img id ="closeContactBtn" class="closeBtn" src="images/closeButton.png"></a>
+		</div>
+		<div id="contactInfo">
+			assi223@g.uky.edu<br>
+		</div>
+		
+	</div> <!-- contactSection end --> 
 
 	<div id="homeSection" class="container">
 		<div class="titleBlock">Arthur Silveira</div>
 		<div id="titleText"><div style="float: left;"  class="scroller"> </div></div>
 	</div> <!-- homeSection end -->
 
-	<div id="projectsSection" class="container">
-		<div class="titleBlock">My Projects</div>
-	</div><!--projectSection end-->
+	<div id="aboutSection" class="container">
+		<div class="titleBlock">About Me</div>
+	</div><!--aboutSection end-->
 
-	<div id="contactSection" class="container">
-		<div class="titleBlock">Say Hello</div>
-			<div id="contactInfo">
-				assi223@g.uky.edu<br>
-			</div>
-	</div><!--contactSection end-->
+	<div id="projectsSection" class="container">
+		<div class="titleBlock"> My Projects</div>
+			
+	</div><!--projectsSection end-->
 
 
 <script>
@@ -84,10 +93,7 @@
 	});
 	
 	$(document).ready(function(){
-
-			// fade in menu bar
-		$('#menuBar').fadeIn('slow');
-			// set nav listeners for scrolling animation
+			// set nav listeners for scrolling animation and siderBar
 		setNavListeners();
 	});
 
@@ -96,10 +102,26 @@
 		$("#menuBar a").click(function(e){
 			var sectionID = "#" + e.currentTarget.id + "Section";
 
-			$('html, body').animate({
-				scrollTop: $(sectionID).offset().top
-			}, 700);
+			if (sectionID == "#contactSection"){
+				popSideBar();
+			}
+			else
+				$('html, body').animate({
+					scrollTop: $(sectionID).offset().top
+				}, 700);
 		})
+	}
+
+	/*sets listener for close button on side bar*/
+	$("#closeContactBtn").click(function(){
+		hideSideBar();
+	});
+
+	function popSideBar(){
+		$("#contactSection").addClass('popOut');
+	}
+	function hideSideBar(){
+		$("#contactSection").removeClass('popOut');
 	}
 
 	/*navigation bar collapsing animation*/
@@ -107,10 +129,14 @@
 		if ($(this).scrollTop() > 100){
 			$('#menuBar').addClass('sticky');
 			$('#logo').addClass('fade');
+			$('#closeContactBtn').addClass('sticky');
+			$('#buttonContainer').addClass('sticky');
 		}
 		else{
 			$('#menuBar').removeClass('sticky');
 			$('#logo').removeClass('fade');
+			$('#closeContactBtn').removeClass('sticky');
+			$('#buttonContainer').removeClass('sticky');
 			
 		}
 	});
