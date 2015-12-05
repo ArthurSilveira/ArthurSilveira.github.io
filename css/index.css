@@ -172,8 +172,8 @@ li:hover, #logo:hover, #contact:hover, #closeContactBtn:hover {
 	padding-top: 100px;
 	height:100vh;
 	text-align: center;
-	color: white;
-	background-color: black;
+	color: black;
+	background-color: white;
 }
 
 #projectsSection {
