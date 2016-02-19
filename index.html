@@ -57,8 +57,12 @@
 	</div> <!-- contactSection end --> 
 
 	<div id="homeSection" class="container">
-		<div class="titleBlock">Arthur Silveira</div>
-		<div id="titleText"><div style="float: left;"  class="scroller"> </div></div>
+		<div class="titleBlock">Arthur Silveira
+
+			<div id="titleText"><div style="float: left;"  class="scroller"> </div></div>
+			<!--scroll text animation-->
+		</div>
+		
 	</div> <!-- homeSection end -->
 
 	<div id="aboutSection" class="container">
@@ -129,7 +133,7 @@
 
 	/*navigation bar collapsing animation*/
 	$(window).scroll(function(){5
-		if ($(this).scrollTop() > 100){
+		if ($(this).scrollTop() > 70){
 			$('#menuBar').addClass('sticky');
 			$('#logo').addClass('fade');
 			$('#closeContactBtn').addClass('sticky');
