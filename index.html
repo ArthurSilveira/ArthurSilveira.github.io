@@ -45,6 +45,7 @@
 	</script>
 	<!-- includes the google analytics snippet -->
 
+
 	<div id="menuBar" class="fadeIn">
 		<a id="home" ><img id ="logo" class="logo" src="images/logo.png"></a>
 		<nav>
@@ -62,7 +63,7 @@
 			<a id="closeContact" ><img id ="closeContactBtn" class="closeBtn" src="images/closeButton.png"></a>
 		</div>
 		<div id="contactInfo">
-			arthur.silveira@uky.edu<br>
+			<a href="mailto:arthur.silveira@uky.edu">arthur.silveira@uky.edu</a>
 		</div>
 		
 	</div> <!-- contactSection end --> 
@@ -73,13 +74,22 @@
 	</div> <!-- homeSection end -->
 
 	<div id="aboutSection" class="container">
-		<div class="titleBlock">About Me</div>
+		<div class="sectionTitle">ABOUT</div>
+		<hr>
+		<div class="contentBlock">
+			<p>I'm a student of computer Science and TA at the University of Kentucky. 
+			I love art and design so when I'm not programming you will find me drawing, 
+			photoshopping or developing websites.</p>
+		</div>
+		
 	</div><!--aboutSection end-->
 
 	<div id="projectsSection" class="container">
-		<div class="titleBlock"> My Projects</div>
+		<div class="sectionTitle"> PROJECTS</div>
+		<hr>
 			
 	</div><!--projectsSection end-->
+
 
 <script>
 
@@ -124,9 +134,11 @@
 
 	function popSideBar(){
 		$("#contactSection").addClass('popOut');
+		$("#bigDiv").addClass('shrink');
 	}
 	function hideSideBar(){
 		$("#contactSection").removeClass('popOut');
+		$("#bigDiv").removeClass('shrink');
 	}
 
 	/*navigation bar collapsing animation*/
