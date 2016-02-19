@@ -33,6 +33,7 @@ body {
 	width: 100%;
 	height: 320px;
 	font-size: 13px;
+	font-weight: 900;
 	background-color: rgba(0,0,0,0);
 	z-index: 1;
 }
@@ -173,7 +174,7 @@ hr {
 .titleBlock {
 		position: absolute;
 		left: 16%;
-		top:340px;
+		top:330px;
 		font-size: 70px;
 		/*font-weight: 700;*/
 }
@@ -188,7 +189,7 @@ hr {
 }
 
 .sectionTitle{
-	font-size: 47px;
+	font-size: 45px;
 	font-weight: 700;
 }
 
