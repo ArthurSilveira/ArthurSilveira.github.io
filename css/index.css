@@ -152,7 +152,7 @@ hr {
 
 #contactInfo {
 	position: absolute;
-	top: 50%;
+	top: 40%;
 	left:50%;
 	width: 200px;
 	margin-left: -95px;
@@ -182,7 +182,7 @@ hr {
 #titleText {
 	/*position: relative;*/
 	line-height: 32px;
-	font-weight: 100;
+	font-weight: 500;
 	font-size: 26px;
 	height:50px;
 	color: #508dad;
@@ -190,17 +190,20 @@ hr {
 
 #socialContainer{
 	position: absolute;
-	bottom: 7%;
-	right: 23%;
-	width: 2%;
-	height: 33vh;
-	background-color: black;
+	right:10%;
+	top: 50%;
+	left: 30px;
+	width: 230px;
+	height: 50px;
+	background-color: transparent;
 }
 
 .socialIcon{
+	position: relative;
+	transition: all .3s ease;
 	cursor:pointer;
-	max-height: 25px;
-	margin-top: 15px;;
+	max-height: 30px;
+	margin-right: 10px;
 }
 
 .sectionTitle{
