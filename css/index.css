@@ -143,7 +143,7 @@ ul li, #logo, #closeContactBtn {
 	cursor:pointer;
 }
 
-li:hover, a:hover, #logo:hover, #contact:hover, #closeContactBtn:hover {
+a:hover, #logo:hover, #contact:hover, #closeContactBtn:hover {
 	-o-transition:.3s;
 	-ms-transition:.3s;
 	-moz-transition:.3s;
