@@ -1,7 +1,59 @@
 @font-face{
 	font-family: 'Montserrat-UltraLight';
 	src: url('../fonts/Montserrat-UltraLight.otf');
-}	
+}
+
+@-webkit-keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+@-moz-keyframes fadeIn { from {opacity:0;} to {opacity:1;} }	
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+
+.fade-in{
+	opacity: 0;
+	-webkit-animation:fadeIn ease-in 1;
+	-moz-animation:fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+
+	-webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+	animation-duration: 2s;
+}
+
+.fade-in.one{
+	-webkit-animation-delay: 0s;
+	-moz-animation-delay: 0s;
+	animation-delay: 0s;
+}
+
+.fade-in.two{
+	-webkit-animation-delay:.5s;
+	-moz-animation-delay:.5s;
+	animation-delay: .5s;
+}
+
+.fade-in.three{
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	animation-delay: 1s;
+}
+.fade-in.four{
+	-webkit-animation-delay:1.5s;
+	-moz-animation-delay:1.5s;
+	animation-delay: 1.5s;
+}
+.fade-in.five{
+	-webkit-animation-delay:2.5s;
+	-moz-animation-delay:2.5s;
+	animation-delay: 2.5s;
+}
+.fade-in.six{
+	-webkit-animation-delay:3s;
+	-moz-animation-delay:3s;
+	animation-delay: 3s;
+}
 
 html{
 	font-family: 'Montserrat-UltraLight', sans-serif;
@@ -164,9 +216,8 @@ hr {
 #homeSection{
 	position: relative;
 	transition: all 1.2s ease;
-	/*padding-top: 320px;
-	padding-left: 260px;*/
 	height:100vh;
+	width: 100%;
 	background-color: black;
 
 }
@@ -187,6 +238,7 @@ hr {
 	height:50px;
 	color: #508dad;
 }
+
 
 #socialContainer{
 	position: absolute;
@@ -218,6 +270,9 @@ hr {
 	text-align: center;
 	color: black;
 	background-color: rgb(200,200,205);
+}
+#aboutSection.shrink{
+	width:500px%;
 }
 
 #projectsSection {

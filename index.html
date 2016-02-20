@@ -34,14 +34,14 @@
 
 <body>
 
-	<div id="menuBar" class="fadeIn">
+	<div id="menuBar">
 		<a id="home" ><img id ="logo" class="logo" src="images/logo.png"></a>
 		<nav>
 			<ul>
-				<li><a id="about">about</a></li>
-				<li><a id="projects">projects</a></li>
-				<li><a id="resume" href="./resume/resume.pdf" target="_blank">resume</a></li>
-				<li><a id="contact">contact</a></li>
+				<li class="fade-in four"><a id="about">about</a></li>
+				<li class="fade-in three"><a id="projects">projects</a></li>
+				<li class="fade-in two"><a id="resume" href="./resume/resume.pdf" target="_blank">resume</a></li>
+				<li class="fade-in one"><a id="contact">contact</a></li>
 			</ul>
 		</nav>
 	</div> <!-- menuBar end -->
@@ -69,13 +69,13 @@
 				<a href="https://www.instagram.com/arthur_saboya/" target="_blank"><img id="instagramIcon" class="socialIcon" src="images/instagram.png"></a>
 				<a href=""><img id="twitterIcon" class="socialIcon" src="images/twitter.png"></a>
 			</span>
-		</div><!--end of socialCOntainer-->
+		</div><!--end of socialContainer-->
 		
 	</div> <!-- contactSection end --> 
 
 	<div id="homeSection" class="container">
-		<div class="titleBlock">Arthur Silveira
-			<div id="titleText"><div style="float: left;"  class="scroller"> </div></div>
+		<div class="titleBlock  fade-in five">Arthur Silveira
+			<div class="fade-in six" id="titleText"><div style="float: left;"  class="scroller"> </div></div>
 			<!--scroll text animation-->
 		</div>
 		
@@ -142,6 +142,7 @@
 
 	function popSideBar(){
 		$("#contactSection").addClass('popOut');
+		$("aboutSection").addClass('shrink');
 	}
 	function hideSideBar(){
 		$("#contactSection").removeClass('popOut');
