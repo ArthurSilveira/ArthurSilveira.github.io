@@ -271,9 +271,6 @@ hr {
 	color: black;
 	background-color: rgb(200,200,205);
 }
-#aboutSection.shrink{
-	width:500px%;
-}
 
 #projectsSection {
 	text-align: center;
