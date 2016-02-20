@@ -188,6 +188,21 @@ hr {
 	color: #508dad;
 }
 
+#socialContainer{
+	position: absolute;
+	bottom: 5%;
+	right: 23%;
+	width: 3%;
+	height: 33vh;
+	background-color: black;
+}
+
+.socialIcon{
+	cursor:pointer;
+	max-height: 25px;
+	margin-top: 15px;;
+}
+
 .sectionTitle{
 	font-size: 45px;
 	font-weight: 700;
