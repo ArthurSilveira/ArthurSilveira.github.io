@@ -165,6 +165,7 @@ hr {
 }
 
 #contactSection {
+	text-align: center;
 	transition: all .5s ease;
 	position: fixed;
 	right: 0;
@@ -206,27 +207,26 @@ hr {
 #contactInfo {
 	position: absolute;
 	top: 40%;
-	left:53px;
-	width: 230px;
+	width: 100%;
+	/*left:53px;*/
 	font-weight: 900;
 	color: black;
 }
 
 #socialContainer{
-	position: absolute;
-	width: 230px;
-	height: 50px;
+	display: inline-block;
+	width: 280px;
+	height: 40px;
 	top: 50%;
-	left: 40px;
 	background-color: transparent;
 }
 
 .socialIcon{
-	position: relative;
+	display: inline-block;
 	transition: all .3s ease;
+	margin-right: 10px;
 	cursor:pointer;
 	max-height: 30px;
-	margin-right: 10px;
 }
 
 /*contains .titleBlock and #titleText*/
