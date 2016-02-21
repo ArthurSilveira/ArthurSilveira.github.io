@@ -256,27 +256,29 @@ hr {
 	color: #508dad;
 }
 
-.sectionTitle{
-	font-size: 45px;
-	font-weight: 700;
-}
-
-#aboutSection {
-	display: inline-block;
+.sectionWrapper{
 	transition: all .5s ease;
 	position: relative;
 	width: 100%;
 	height:100vh;
 	padding-top: 100px;
 	text-align: center;
-	color: black;
-	background-color: rgb(200,200,205);
 }
 
-#aboutSection.shrink {
+.sectionWrapper.shrink {
 	width: -moz-calc(100% - 280px);
     width: -webkit-calc(100% - 280px);
     width: calc(100% - 280px);
+}
+
+.sectionTitle{
+	font-size: 45px;
+	font-weight: 700;
+}
+
+#aboutSection {
+	color: black;
+	background-color: rgb(200,200,205);
 }
 
 #aboutInfo {
@@ -291,9 +293,6 @@ hr {
 }
 
 #projectsSection {
-	text-align: center;
-	padding-top: 100px;
-	height:100vh;
 	color: white;
 	background-color: black;
 }

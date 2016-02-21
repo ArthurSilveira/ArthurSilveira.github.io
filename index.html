@@ -81,7 +81,7 @@
 		
 	</div> <!-- homeSection end -->
 
-	<div id="aboutSection" class="container">
+	<div id="aboutSection" class="sectionWrapper">
 		<div class="sectionTitle">ABOUT</div>
 		<hr>
 		<div id="aboutInfo" class="contentBlock">
@@ -92,7 +92,7 @@
 		
 	</div><!--aboutSection end-->
 
-	<div id="projectsSection" class="container">
+	<div id="projectsSection" class="sectionWrapper">
 		<div class="sectionTitle"> PROJECTS</div>
 		<hr>
 			
@@ -145,11 +145,11 @@
 	//pop and hide contact side bar
 	function popSideBar(){
 		$("#contactSection").addClass('popOut');
-		$("#aboutSection").addClass('shrink');
+		$(".sectionWrapper").addClass('shrink');
 	}
 	function hideSideBar(){
 		$("#contactSection").removeClass('popOut');
-		$("#aboutSection").removeClass('shrink');
+		$(".sectionWrapper").removeClass('shrink');
 
 	}
 
