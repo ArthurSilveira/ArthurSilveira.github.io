@@ -85,7 +85,7 @@ body {
 	width: 100%;
 	height: 320px;
 	font-size: 13px;
-	font-weight: 900;
+	font-weight: 400;
 	background-color: rgba(0,0,0,0);
 	z-index: 1;
 }
@@ -166,11 +166,12 @@ hr {
 
 #contactSection {
 	transition: all .5s ease;
-	background-color: black;
 	position: fixed;
 	right: 0;
-	height: 100vh;
 	width: 0;
+	height: 100vh;
+	background-color: black;
+	
 }
 
 #contactSection.popOut {
@@ -205,11 +206,27 @@ hr {
 #contactInfo {
 	position: absolute;
 	top: 40%;
-	left:50%;
-	width: 200px;
-	margin-left: -95px;
-	font-weight: 600;
+	left:53px;
+	width: 230px;
+	font-weight: 900;
 	color: black;
+}
+
+#socialContainer{
+	position: absolute;
+	width: 230px;
+	height: 50px;
+	top: 50%;
+	left: 40px;
+	background-color: transparent;
+}
+
+.socialIcon{
+	position: relative;
+	transition: all .3s ease;
+	cursor:pointer;
+	max-height: 30px;
+	margin-right: 10px;
 }
 
 /*contains .titleBlock and #titleText*/
@@ -239,37 +256,38 @@ hr {
 	color: #508dad;
 }
 
-
-#socialContainer{
-	position: absolute;
-	right:10%;
-	top: 50%;
-	left: 30px;
-	width: 230px;
-	height: 50px;
-	background-color: transparent;
-}
-
-.socialIcon{
-	position: relative;
-	transition: all .3s ease;
-	cursor:pointer;
-	max-height: 30px;
-	margin-right: 10px;
-}
-
 .sectionTitle{
 	font-size: 45px;
 	font-weight: 700;
 }
 
 #aboutSection {
+	display: inline-block;
+	transition: all .5s ease;
 	position: relative;
-	padding-top: 100px;
+	width: 100%;
 	height:100vh;
+	padding-top: 100px;
 	text-align: center;
 	color: black;
 	background-color: rgb(200,200,205);
+}
+
+#aboutSection.shrink {
+	width: -moz-calc(100% - 280px);
+    width: -webkit-calc(100% - 280px);
+    width: calc(100% - 280px);
+}
+
+#aboutInfo {
+	position: absolute;
+	top: 45%;
+	padding-left:10%;
+	padding-right:10%;
+	font-size: 24px;
+	/*font-weight:80;*/
+	width: 80%;
+	height: 30%;
 }
 
 #projectsSection {
@@ -279,16 +297,3 @@ hr {
 	color: white;
 	background-color: black;
 }
-
-.contentBlock {
-	position: absolute;
-	left: 50%;
-	top: 45%;
-	font-size: 24px;
-	/*font-weight:80;*/
-	width: 800px;
-	height: 120px;
-	margin-top: -60px;
-	margin-left: -400px;
-}
-
