@@ -84,7 +84,7 @@
 	<div id="aboutSection" class="container">
 		<div class="sectionTitle">ABOUT</div>
 		<hr>
-		<div class="contentBlock">
+		<div id="aboutInfo" class="contentBlock">
 			<p>I'm a student of Computer Science and TA at the University of Kentucky. 
 			I love art and design so when I'm not programming you will find me drawing, 
 			photoshopping or developing websites.</p>
@@ -101,7 +101,7 @@
 
 <script>
 
-	/*typed text animation*/
+	/*typed scrolling text animation*/
 	$(function(){
 		$(".scroller").typed({
 			strings: ["Student", "Programmer","Designer"],
@@ -116,7 +116,7 @@
 	});
 	
 	$(document).ready(function(){
-			// set nav listeners for scrolling animation and siderBar
+		// set nav listeners for scrolling animation and siderBar
 		setNavListeners();
 	});
 
@@ -125,9 +125,11 @@
 		$("#menuBar a").click(function(e){
 			var sectionID = "#" + e.currentTarget.id + "Section";
 
+			//if click on 'CONTACT'
 			if (sectionID == "#contactSection"){
 				popSideBar();
 			}
+			//else scroll to chosen part of page.
 			else
 				$('html, body').animate({
 					scrollTop: $(sectionID).offset().top
@@ -140,16 +142,19 @@
 		hideSideBar();
 	});
 
+	//pop and hide contact side bar
 	function popSideBar(){
 		$("#contactSection").addClass('popOut');
+		$("#aboutSection").addClass('shrink');
 	}
 	function hideSideBar(){
 		$("#contactSection").removeClass('popOut');
+		$("#aboutSection").removeClass('shrink');
 
 	}
 
 	/*navigation bar collapsing animation*/
-	$(window).scroll(function(){5
+	$(window).scroll(function(){
 		if ($(this).scrollTop() > 70){
 			$('#menuBar').addClass('sticky');
 			$('#logo').addClass('fade');
