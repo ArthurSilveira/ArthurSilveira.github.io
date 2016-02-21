@@ -47,13 +47,10 @@
 	</div> <!-- menuBar end -->
 
 	<div id="contactSection" class="sideBar">
-		<div id="buttonContainer">
-			<a id="closeContact" ><img id ="closeContactBtn" class="closeBtn" src="images/closeButton.png"></a>
-		</div>
+		<a id="closeContact" ><img id ="closeContactBtn" class="closeBtn" src="images/closeButton.png"></a>
 		<div id="contactInfo">
 			<a href="mailto:arthur.silveira@uky.edu">arthur.silveira@uky.edu</a>
 		</div>
-
 		<div id="socialContainer">
 			<span>
 				<a href="https://github.com/ArthurSilveira" target="_blank">
@@ -158,15 +155,10 @@
 		if ($(this).scrollTop() > 70){
 			$('#menuBar').addClass('sticky');
 			$('#logo').addClass('fade');
-			$('#closeContactBtn').addClass('sticky');
-			$('#buttonContainer').addClass('sticky');
 		}
 		else{
 			$('#menuBar').removeClass('sticky');
 			$('#logo').removeClass('fade');
-			$('#closeContactBtn').removeClass('sticky');
-			$('#buttonContainer').removeClass('sticky');
-			
 		}
 	});
 

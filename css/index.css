@@ -172,7 +172,6 @@ hr {
 	width: 0;
 	height: 100vh;
 	background-color: black;
-	
 }
 
 #contactSection.popOut {
@@ -181,52 +180,37 @@ hr {
 	z-index: 1;
 }
 
-#buttonContainer {
-	transition: all .8s ease;
-	height: 320px;
-/*	background-color: rgba(0,0,0,.3);*/
-}
-
-#buttonContainer.sticky{
-/*	background-color: #508dad;*/
-	height: 60px;
-}
-
 #closeContactBtn {
 	transition: all .8s ease;
 	position: absolute;
 	left: 10%;
-	top: 18%;
+	top: 30px;
 	max-height: 15px;
 }
 
-#closeContactBtn.sticky{
-	top:3%;
-}
-
 #contactInfo {
-	position: absolute;
+	position: relative;
+	width: 280px;
+	height: 40px;
 	top: 40%;
-	width: 100%;
-	/*left:53px;*/
 	font-weight: 900;
 	color: black;
 }
 
 #socialContainer{
-	display: inline-block;
+	position: relative;
 	width: 280px;
 	height: 40px;
-	top: 50%;
+	top: 45%;
 	background-color: transparent;
 }
 
 .socialIcon{
 	display: inline-block;
 	transition: all .3s ease;
-	margin-right: 10px;
 	cursor:pointer;
 	max-height: 30px;
+	margin-right: 10px;
 }
 
 /*contains .titleBlock and #titleText*/
