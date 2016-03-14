@@ -74,6 +74,7 @@ body {
 	background-size: cover;
 	color: white;
 	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 #menuBar{
@@ -115,7 +116,6 @@ nav {
 	bottom: 35%;
 	left:14%;
 	float: left;
-	/*margin-left: 220px;*/
 }
 
 a{
@@ -238,6 +238,7 @@ hr {
 		left: 16%;
 		top:330px;
 		font-size: 70px;
+		z-index: 1;
 		/*font-weight: 700;*/
 }
 
@@ -248,6 +249,7 @@ hr {
 	font-size: 26px;
 	height:50px;
 	color: #508dad;
+	z-index: 1;
 }
 
 .sectionWrapper{
@@ -289,4 +291,10 @@ hr {
 #projectsSection {
 	color: white;
 	background-color: black;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
