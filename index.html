@@ -69,7 +69,7 @@
 		</div><!--end of socialContainer-->
 		
 		<div id="contactLogoWrap">
-			<img id ="contactLogo" src="images/logoBlack.png">
+			<a href="http://arthursilveira.co"><img id ="contactLogo" src="images/logoBlack.png"></a>
 		</div>
 		
 	</div> <!-- contactSection end --> 
@@ -79,7 +79,7 @@
 			<div class="fade-in six" id="titleText"><div style="float: left;"  class="scroller"> </div></div>
 			<!--scroll text animation-->
 		</div>
-
+cont
 		<canvas id="c"></canvas>
     	<script src='http://dat-gui.googlecode.com/git/build/dat.gui.min.js'></script>
     	<script src="js/index.js"></script>
@@ -121,18 +121,29 @@
 	});
 	
 	$(document).ready(function(){
+		
+		var contactOpen = false;
 		// set nav listeners for scrolling animation and siderBar
-		setNavListeners();
+		setNavListeners(contactOpen);
+
 	});
 
 	/*sets listeners on anchor tags*/
-	function setNavListeners(){
+	function setNavListeners(contactOpen){
 		$("#menuBar a").click(function(e){
 			var sectionID = "#" + e.currentTarget.id + "Section";
 
 			//if click on 'CONTACT'
 			if (sectionID == "#contactSection"){
-				popSideBar();
+				if (contactOpen == false){
+					contactOpen = true;
+					popSideBar();
+				}
+				else {
+					contactOpen = false;
+					hideSideBar();
+				}
+
 			}
 			//else scroll to chosen part of page.
 			else
@@ -140,12 +151,16 @@
 					scrollTop: $(sectionID).offset().top
 				}, 700);
 		})
+		
+			/*sets listener for close button on side bar*/
+		$("#closeContactBtn").click(function(){
+			hideSideBar();
+			contactOpen = false;
+		});
+
 	}
 
-	/*sets listener for close button on side bar*/
-	$("#closeContactBtn").click(function(){
-		hideSideBar();
-	});
+
 
 	//pop and hide contact side bar
 	function popSideBar(){

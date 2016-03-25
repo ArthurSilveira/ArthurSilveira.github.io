@@ -216,11 +216,11 @@ hr {
 	position: relative;
 	width: 280px;
 	height: 100px;
-	top: 70%;
+	top: 60%;
 }
 
 #contactLogo{
-	max-height: 60px;
+	max-height: 90px;
 }
 
 /*contains .titleBlock and #titleText*/
