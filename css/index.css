@@ -351,13 +351,15 @@ canvas {
 }
 
 .tileBack {
-	box-shadow: 4px 5px 15px #508dad;
+	/*box-shadow: 4px 5px 15px #508dad;*/
 	box-sizing: border-box;
+	padding: 30px;
 	-webkit-backface-visibility: hidden;
 	position: absolute;
 	width: 200px;
 	height: 300px;
-	/*background-color: #508dad;*/
+	background-color: white;
+	color: black;
 	display: flex;           /* establish flex container */
 	flex-direction: column;  /* make main axis vertical */
 	justify-content: center; /* center items vertically, in this case */
@@ -365,6 +367,10 @@ canvas {
 	-webkit-transform: rotateY(180deg);
 	transition: transform .8s;
 
+}
+
+.tileBack a {
+	color: #508dad;
 }
 
 #catLogoWrapper {
