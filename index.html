@@ -6,7 +6,7 @@
 	<link href="css/index.css" rel="stylesheet" type="text/css" />
 	<!-- import jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<!--for the typed text animation-->
+	<!-- for the typed text animation-->
 	<script src="js/typed.js"> </script>
 
 	<!-- loading entirely too many favicons -->
@@ -79,15 +79,10 @@
 			<div class="fade-in six" id="titleText"><div style="float: left;"  class="scroller"> </div></div>
 			<!--scroll text animation-->
 		</div>
-<<<<<<< Updated upstream
-cont
-		<canvas id="c"></canvas>
-    	<script src='http://dat-gui.googlecode.com/git/build/dat.gui.min.js'></script>
-    	<script src="js/index.js"></script>
-		
-=======
 
->>>>>>> Stashed changes
+		<canvas id="c"></canvas>
+
+
 	</div> <!-- homeSection end -->
 
 	<div id="aboutSection" class="sectionWrapper">
@@ -119,9 +114,9 @@ cont
 
 	</div><!--projectsSection end-->
 
-
+<!-- for the  canvas particle animation -->
+<script src="js/index.js"></script>
 <script>
-
 	/*typed scrolling text animation*/
 	$(function(){
 		$(".scroller").typed({
@@ -137,7 +132,7 @@ cont
 	});
 
 	$(document).ready(function(){
-		
+
 		var contactOpen = false;
 		// set nav listeners for scrolling animation and siderBar
 		setNavListeners(contactOpen);
@@ -167,7 +162,7 @@ cont
 					scrollTop: $(sectionID).offset().top
 				}, 700);
 		})
-		
+
 			/*sets listener for close button on side bar*/
 		$("#closeContactBtn").click(function(){
 			hideSideBar();
