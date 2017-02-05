@@ -4,7 +4,7 @@
 }
 
 @-webkit-keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-@-moz-keyframes fadeIn { from {opacity:0;} to {opacity:1;} }	
+@-moz-keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
 @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
 
 .fade-in{
@@ -55,6 +55,8 @@
 	animation-delay: 3s;
 }
 
+
+
 html{
 	font-family: 'Montserrat-UltraLight', sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -96,7 +98,7 @@ body {
 	background-color: rgba(17,17,17,.87);
 }
 
-#logo {	
+#logo {
 	transition: all .5s ease;
 	position: absolute;
 	opacity: 0;
@@ -233,6 +235,12 @@ hr {
 
 }
 
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .titleBlock {
 		position: absolute;
 		left: 16%;
@@ -291,10 +299,62 @@ hr {
 #projectsSection {
 	color: white;
 	background-color: black;
+	display: flex;           /* establish flex container */
+	flex-direction: column;  /* make main axis vertical */
+	/*justify-content: center; /* center items vertically, in this case */
+	align-items: center;     /* center items horizontally, in this case */
 }
 
-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
+.projectsContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	top:35%;
+}
+
+.flipTile {
+	position: relative;
+	width: 200px;
+	height: 300px;
+	transition: transform .5s;
+}
+
+.flipTile:hover .tileFront{
+	transform: rotateY(-180deg);
+}
+
+.flipTile:hover .tileBack{
+	transform: rotateY(0deg);
+}
+
+.tileFront {
+	position: absolute;
+	backface-visibility: hidden;
+	transform: rotateY(0deg);
+	transition: transform .8s;
+	width: 200px;
+	height: 300px;
+	background-color: #508dad;
+	display: flex;           /* establish flex container */
+	flex-direction: column;  /* make main axis vertical */
+	justify-content: center; /* center items vertically, in this case */
+	align-items: center;     /* center items horizontally, in this case */
+}
+
+.tileBack {
+	position: absolute;;
+	backface-visibility: hidden;
+	width: 200px;
+	height: 300px;
+	background-color: #e4e4e4;
+	display: flex;           /* establish flex container */
+	flex-direction: column;  /* make main axis vertical */
+	justify-content: center; /* center items vertically, in this case */
+	align-items: center;     /* center items horizontally, in this case */
+	transform: rotateY(180deg);
+	transition: transform .8s;
+
 }
