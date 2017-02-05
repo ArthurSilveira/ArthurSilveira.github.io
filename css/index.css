@@ -267,6 +267,7 @@ canvas {
 	height:100vh;
 	padding-top: 100px;
 	text-align: center;
+	/*overflow-y: hidden;*/
 }
 
 .sectionWrapper.shrink {
@@ -307,37 +308,42 @@ canvas {
 
 .projectsContainer {
 	display: flex;
-	flex-direction: column;
+	padding: 50px;
+	box-sizing: border-box;
+	flex-direction: row;
 	align-items: center;
-	width: 400px;
+	width: 1000px;
 	height: 400px;
-	position: absolute;
-	top:35%;
 }
 
 .flipTile {
 	position: relative;
+	float: left;
+	padding: 50px;
 	width: 200px;
 	height: 300px;
-	transition: transform .5s;
+	transition: transform .9s;
 }
 
 .flipTile:hover .tileFront{
-	transform: rotateY(-180deg);
+	-webkit-transform: rotateY(-180deg);
 }
 
 .flipTile:hover .tileBack{
-	transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
 }
 
 .tileFront {
+	box-shadow: 4px 5px 15px #fff;
+	-webkit-backface-visibility: hidden;
+	box-sizing: border-box;
 	position: absolute;
-	backface-visibility: hidden;
-	transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
 	transition: transform .8s;
 	width: 200px;
-	height: 300px;
-	background-color: #508dad;
+	height: 290px;
+	background-color: #000;
+	color: #e1e1e1;
 	display: flex;           /* establish flex container */
 	flex-direction: column;  /* make main axis vertical */
 	justify-content: center; /* center items vertically, in this case */
@@ -345,16 +351,27 @@ canvas {
 }
 
 .tileBack {
-	position: absolute;;
-	backface-visibility: hidden;
+	box-shadow: 4px 5px 15px #508dad;
+	box-sizing: border-box;
+	-webkit-backface-visibility: hidden;
+	position: absolute;
 	width: 200px;
 	height: 300px;
-	background-color: #e4e4e4;
+	/*background-color: #508dad;*/
 	display: flex;           /* establish flex container */
 	flex-direction: column;  /* make main axis vertical */
 	justify-content: center; /* center items vertically, in this case */
 	align-items: center;     /* center items horizontally, in this case */
-	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
 	transition: transform .8s;
 
+}
+
+#catLogoWrapper {
+	width: 180px;
+}
+
+#catLogoWrapper img {
+	width: 100%;
+	height: 100%;
 }
