@@ -95,7 +95,8 @@ body {
 
 #menuBar.sticky {
 	height: 50px;
-	background-color: rgba(17,17,17,.87);
+	background-color: rgba(0,0,0,1);
+	z-index: 2;
 }
 
 #logo {
@@ -174,12 +175,12 @@ hr {
 	width: 0;
 	height: 100vh;
 	background-color: black;
+	z-index: 3
 }
 
 #contactSection.popOut {
 	width: 280px;
 	background-color: #508dad;
-	z-index: 1;
 }
 
 #closeContactBtn {
