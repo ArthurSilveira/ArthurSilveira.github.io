@@ -284,7 +284,7 @@ canvas {
 
 #aboutSection {
 	color: black;
-	background-color: rgb(200,200,205);
+	background-color: white;
 }
 
 #aboutInfo {
@@ -299,8 +299,8 @@ canvas {
 }
 
 #projectsSection {
-	color: white;
-	background-color: black;
+	color: black;
+	background-color: white;
 	display: flex;           /* establish flex container */
 	flex-direction: column;  /* make main axis vertical */
 	/*justify-content: center; /* center items vertically, in this case */
@@ -313,14 +313,14 @@ canvas {
 	box-sizing: border-box;
 	flex-direction: row;
 	align-items: center;
-	width: 1000px;
+	width: 1200px;
 	height: 400px;
 }
 
 .flipTile {
 	position: relative;
 	float: left;
-	padding: 50px;
+	padding: 80px;
 	width: 200px;
 	height: 300px;
 	transition: transform .9s;
@@ -335,7 +335,8 @@ canvas {
 }
 
 .tileFront {
-	box-shadow: 4px 5px 15px #fff;
+	box-shadow: 4px 5px 15px #508dad;
+	border-radius: 50px;
 	-webkit-backface-visibility: hidden;
 	box-sizing: border-box;
 	position: absolute;
